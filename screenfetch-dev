@@ -879,10 +879,10 @@ detectdistro () {
 					distro_codename=""
 					distro_release=""
 					;;
-        "Vylen Linux"|"vylen")
-	        distro="Vylen Linux"
-	        distro_release="n/a"
-	        ;;
+				"Vylen Linux"|"vylen")
+					distro="Vylen Linux"
+					distro_release="n/a"
+					;;
 				"Zorin")
 					distro="Zorin OS"
 					distro_codename=""
@@ -1351,7 +1351,7 @@ detectdistro () {
 		ubuntu) distro="Ubuntu";;
 		viperr) distro="Viperr" ;;
 		void*linux) distro="Void Linux" ;;
-    vylen*) distro="Vylen Linux" ;;
+		vylen*) distro="Vylen Linux" ;;
 		zorin*) distro="Zorin OS" ;;
 		endeavour*) distro="EndeavourOS" ;;
 	esac
@@ -1479,8 +1479,8 @@ detectpkgs () {
 			pkgs=$(rpm -qa | wc -l) ;;
 		'Void Linux')
 			pkgs=$(xbps-query -l | wc -l) ;;
-    'Vylen Linux')
-      pkgs=$(ls /var/lib/emerald/db/ | wc -l) ;;
+		'Vylen Linux')
+			pkgs=$(ls /var/lib/emerald/db/ | wc -l) ;;
 		'Evolve OS')
 			pkgs=$(pisi list-installed | wc -l) ;;
 		'Sulin')
@@ -3425,18 +3425,18 @@ asciiText () {
 "${c4}                                  %s")
 			;;
 
-    "Vylen Linux")
-      if [[ "$no_color" != "1" ]]; then
-        c1=$(getColor 'green')
-      fi
+		"Vylen Linux")
+			if [[ "$no_color" != "1" ]]; then
+				c1=$(getColor 'green')
+			fi
 
-      if [ -n "${my_lcolor}" ]; then
-        c1="${my_lcolor}"
-      fi
+			if [ -n "${my_lcolor}" ]; then
+				c1="${my_lcolor}"
+			fi
 
-      startline="0"
-      logowidth="41"
-      fulloutput=(
+			startline="0"
+			logowidth="41"
+			fulloutput=(
 "${c1}          .^^^^^^:    :^^^^^^.            %s"
 "${c1}        .:^^^^^^^:    :^^^^^^^:.          %s"
 "${c1}      .^^^^^^^^^^:    :^^^^^^^^^^.        %s"
