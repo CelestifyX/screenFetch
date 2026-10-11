@@ -880,7 +880,7 @@ detectdistro () {
 					distro_release=""
 					;;
 				"Vylen Linux"|"vylen")
-					distro="Vylen Linux"
+					distro="Vylen GNU/Linux"
 					distro_release="n/a"
 					;;
 				"Zorin")
@@ -1351,7 +1351,7 @@ detectdistro () {
 		ubuntu) distro="Ubuntu";;
 		viperr) distro="Viperr" ;;
 		void*linux) distro="Void Linux" ;;
-		vylen*) distro="Vylen Linux" ;;
+		vylen*) distro="Vylen GNU/Linux" ;;
 		zorin*) distro="Zorin OS" ;;
 		endeavour*) distro="EndeavourOS" ;;
 	esac
